@@ -28,3 +28,18 @@ func sayHelloWorld() -> String {
 }
 
 print(sayHelloWorld())
+
+
+//MARK: Функции с несколькими входными параметрами
+print("\n//Функции с несколькими входными параметрами")
+
+func greet(namePerson: String, alreadyGreeted: Bool) -> String {
+    if alreadyGreeted {
+        return "Hello again \(namePerson)!"
+    } else {
+        return greet(namePerson: namePerson)
+    }
+}
+
+print(greet(namePerson: "Misha", alreadyGreeted: true))
+print(greet(namePerson: "Oleg", alreadyGreeted: false))

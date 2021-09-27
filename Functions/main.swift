@@ -18,3 +18,13 @@ func greet(namePerson: String) -> String {
 }
 
 print(greet(namePerson: "Artem"))
+
+
+//MARK: Функции без параметров
+print("\n//Функции без параметров")
+
+func sayHelloWorld() -> String {
+    return "Hello world!"
+}
+
+print(sayHelloWorld())

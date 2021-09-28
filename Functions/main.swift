@@ -123,3 +123,12 @@ func someFunction(argumentLabel parameterName: Int) {
 }
 
 someFunction(argumentLabel: 9)
+
+//MARK: Пропуск ярлыков аргумента
+print("\n//Пропуск ярлыков аргумента")
+
+func someFunction1(_ parameterName: Int) {
+    print("\(parameterName) * 10 = \(parameterName * 10)")
+}
+
+someFunction1(8)

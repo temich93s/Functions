@@ -76,5 +76,30 @@ func minMax(array: [Int]) -> (min: Int, max: Int) {
 }
 
 let someArray = [2, 5, 8, 2, 7, 9, 0, 3]
-let minMaxNumber = minMax(array: someArray)
+var minMaxNumber = minMax(array: someArray)
 print("Min: \(minMaxNumber.min), Max: \(minMaxNumber.max)")
+
+
+//MARK: Опциональный кортеж как возвращаемый тип
+print("\n//Опциональный кортеж как возвращаемый тип")
+
+func minMaxOptional(array: [Int]) -> (min: Int, max: Int)? {
+    if array.isEmpty { return nil }
+    var currentMin = array[0]
+    var currentMax = array[0]
+    for number in array {
+        currentMin = (number < currentMin) ? number : currentMin
+        currentMax = (number > currentMax) ? number : currentMax
+    }
+    return (currentMin, currentMax)
+}
+
+let someArray2 = [Int]()
+
+if let minMaxNumber = minMaxOptional(array: someArray2) {
+print("Min: \(minMaxNumber.min), Max: \(minMaxNumber.max)")
+}
+
+if let minMaxNumber = minMaxOptional(array: someArray) {
+print("Min: \(minMaxNumber.min), Max: \(minMaxNumber.max)")
+}

@@ -60,3 +60,21 @@ func printGreetWithoutCounting(namePerson: String) {
 }
 
 printGreetWithoutCounting(namePerson: "Alex")
+
+
+//MARK: Функции, возвращающие несколько значений
+print("\n//Функции, возвращающие несколько значений")
+
+func minMax(array: [Int]) -> (min: Int, max: Int) {
+    var currentMin = array[0]
+    var currentMax = array[0]
+    for number in array {
+        currentMin = (number < currentMin) ? number : currentMin
+        currentMax = (number > currentMax) ? number : currentMax
+    }
+    return (currentMin, currentMax)
+}
+
+let someArray = [2, 5, 8, 2, 7, 9, 0, 3]
+let minMaxNumber = minMax(array: someArray)
+print("Min: \(minMaxNumber.min), Max: \(minMaxNumber.max)")

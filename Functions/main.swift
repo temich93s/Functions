@@ -113,3 +113,13 @@ func anotherGreeting(for name: String) -> String {
 }
 
 print(anotherGreeting(for: "Nikita"))
+
+
+//MARK: Указываем ярлыки аргументов
+print("\n//Указываем ярлыки аргументов")
+
+func someFunction(argumentLabel parameterName: Int) {
+    print("\(parameterName) * 10 = \(parameterName * 10)")
+}
+
+someFunction(argumentLabel: 9)

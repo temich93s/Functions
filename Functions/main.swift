@@ -103,3 +103,13 @@ print("Min: \(minMaxNumber.min), Max: \(minMaxNumber.max)")
 if let minMaxNumber = minMaxOptional(array: someArray) {
 print("Min: \(minMaxNumber.min), Max: \(minMaxNumber.max)")
 }
+
+
+//MARK: Функции с неявным возвращаемым значением
+print("\n//Функции с неявным возвращаемым значением")
+
+func anotherGreeting(for name: String) -> String {
+    "Hello \(name)!!!"
+}
+
+print(anotherGreeting(for: "Nikita"))

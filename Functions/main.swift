@@ -157,3 +157,17 @@ func someFunction3(numbers: Double...) {
 }
 
 someFunction3(numbers: 13, 1, 14.5, 18)
+
+
+//MARK: Сквозные параметры
+print("\n//Сквозные параметры")
+
+func someFunction4(numberA: inout Int, numberB: inout Int) {
+    let temporaryNumber = numberA
+    numberA = numberB
+    numberB = temporaryNumber
+    print("numberA = \(numberA), numberB = \(numberB)")
+}
+var a = 1
+var b = 9
+someFunction4(numberA: &a, numberB: &b)

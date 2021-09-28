@@ -132,3 +132,14 @@ func someFunction1(_ parameterName: Int) {
 }
 
 someFunction1(8)
+
+
+//MARK: Значения по умолчанию для параметров
+print("\n//Значения по умолчанию для параметров")
+
+func someFunction2(number1: Int, number2: Int = 10) {
+    print("\(number1) * \(number2) = \(number1 * number2)")
+}
+
+someFunction2(number1: 4)
+someFunction2(number1: 3, number2: 4)

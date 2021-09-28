@@ -43,3 +43,20 @@ func greet(namePerson: String, alreadyGreeted: Bool) -> String {
 
 print(greet(namePerson: "Misha", alreadyGreeted: true))
 print(greet(namePerson: "Oleg", alreadyGreeted: false))
+
+
+//MARK: Функции, не возвращающие значения
+print("\n//Функции, не возвращающие значения")
+
+func printGreet(namePerson: String) -> Int{
+    print("Hello \(namePerson)!")
+    return namePerson.count
+}
+
+print(printGreet(namePerson: "Ivan"))
+
+func printGreetWithoutCounting(namePerson: String) {
+    let _ = printGreet(namePerson: namePerson)
+}
+
+printGreetWithoutCounting(namePerson: "Alex")

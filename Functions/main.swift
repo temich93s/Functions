@@ -143,3 +143,17 @@ func someFunction2(number1: Int, number2: Int = 10) {
 
 someFunction2(number1: 4)
 someFunction2(number1: 3, number2: 4)
+
+
+//MARK: Вариативные параметры
+print("\n//Вариативные параметры")
+
+func someFunction3(numbers: Double...) {
+    var total: Double = 0
+    for number in numbers {
+        total += number
+    }
+    print("\(total) / \(numbers.count) = \(total / Double(numbers.count))")
+}
+
+someFunction3(numbers: 13, 1, 14.5, 18)

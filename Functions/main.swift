@@ -192,3 +192,13 @@ print(someFunction7(3, 4))
 
 someFunction7 = someFunction6
 print(someFunction7(3, 4))
+
+
+//MARK: Функциональные типы как типы параметров
+print("\n//Функциональные типы как типы параметров")
+
+func someFunction8(_ function: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+    print(function(a, b))
+}
+
+someFunction8(someFunction6(a:b:), 5, 5)

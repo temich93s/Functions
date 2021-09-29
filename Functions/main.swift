@@ -224,3 +224,19 @@ print(someFunction10(9))
 
 someFunction10 = someFunction9(false)
 print(someFunction10(9))
+
+
+//MARK: Вложенные функции
+print("\n//Вложенные функции")
+
+func someFunction11(_ Backward: Bool) -> (Int) -> (Int) {
+    func stepForward(number: Int) -> Int { return number + 1 }
+    func stepBackward(number: Int) -> Int { return number - 1 }
+    return Backward ? stepBackward(number:) : stepForward(number:)
+}
+
+var someFunction12 = someFunction11(true)
+print(someFunction12(7))
+
+someFunction12 = someFunction11(false)
+print(someFunction12(7))

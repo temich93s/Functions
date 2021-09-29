@@ -171,3 +171,24 @@ func someFunction4(numberA: inout Int, numberB: inout Int) {
 var a = 1
 var b = 9
 someFunction4(numberA: &a, numberB: &b)
+
+
+//MARK: Использование функциональных типов
+print("\n//Использование функциональных типов")
+
+func someFunction5(a: Int, b: Int) -> Int {
+    print("a + b = \(a + b)")
+    return a + b
+}
+
+func someFunction6(a: Int, b: Int) -> Int {
+    print("a * b = \(a * b)")
+    return a * b
+}
+
+var someFunction7: (Int, Int) -> Int = someFunction5
+
+print(someFunction7(3, 4))
+
+someFunction7 = someFunction6
+print(someFunction7(3, 4))

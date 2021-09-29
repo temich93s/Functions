@@ -202,3 +202,25 @@ func someFunction8(_ function: (Int, Int) -> Int, _ a: Int, _ b: Int) {
 }
 
 someFunction8(someFunction6(a:b:), 5, 5)
+
+
+//MARK: Функциональные типы как возвращаемые типы
+print("\n//Функциональные типы как возвращаемые типы")
+
+func stepForward(number: Int) -> Int {
+    return number + 1
+}
+
+func stepBackward(number: Int) -> Int {
+    return number - 1
+}
+
+func someFunction9(_ Backward: Bool) -> (Int) -> (Int) {
+    return Backward ? stepBackward(number:) : stepForward(number:)
+}
+
+var someFunction10 = someFunction9(true)
+print(someFunction10(9))
+
+someFunction10 = someFunction9(false)
+print(someFunction10(9))
